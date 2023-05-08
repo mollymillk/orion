@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/orion/static/css/main.995aa126.css",
-    "main.js": "/orion/static/js/main.39812c9a.js",
+    "main.js": "/orion/static/js/main.f4c4496c.js",
     "static/media/RoundedMplus1c-ExtraBold.svg": "/orion/static/media/RoundedMplus1c-ExtraBold.b048b3de7b7bbf95b196.svg",
     "static/media/RoundedMplus1c-Bold.svg": "/orion/static/media/RoundedMplus1c-Bold.456c0675e439dee3c699.svg",
     "static/media/RoundedMplus1c-Black.svg": "/orion/static/media/RoundedMplus1c-Black.f27dc6925d8380e549ec.svg",
@@ -43,10 +43,10 @@
     "static/media/events.jpg": "/orion/static/media/events.7e80f124342b0647d17a.jpg",
     "index.html": "/orion/index.html",
     "main.995aa126.css.map": "/orion/static/css/main.995aa126.css.map",
-    "main.39812c9a.js.map": "/orion/static/js/main.39812c9a.js.map"
+    "main.f4c4496c.js.map": "/orion/static/js/main.f4c4496c.js.map"
   },
   "entrypoints": [
     "static/css/main.995aa126.css",
-    "static/js/main.39812c9a.js"
+    "static/js/main.f4c4496c.js"
   ]
 }
