@@ -23,16 +23,27 @@ const positions = [
 export const Row = styled.div`
   position: relative;
   display: flex;
-  justify-content: ${({ content }) => `flex-${content}`};
+  /* justify-content: ${({ content }) => `flex-${content}`}; */
+  justify-content: space-evenly;
+  opacity: ${({ state }) => (state === "entered" ? 1 : 0)};
+  transform: translateX(${({ state }) => (state === "entered" ? 0 : -400)}px);
+  /* display: ${({ state }) => ((state === "entering" || state === "entered") ? 'flex' : 'none')}; */
+  transition-property: transform, opacity;
+  transition-duration: 2s, 1s;
+  /* align-items: center; */
+  /* svg {
+    width: 50px;
+    height: 50px;
+  } */
 `;
 
 export const SvgWrapper = styled.div`
   position: absolute;
   top: ${({ number }) => positions[number].top + "vh"};
   left: ${({ number }) => positions[number].left + "vw"};
-  -webkit-animation:${({number}) => `spin ${number+1}s linear infinite`};
-  -moz-animation:${({number}) => `spin ${number+1}s linear infinite`};
-  animation:${({number}) => `spin ${number+1}s linear infinite`};
+  -webkit-animation: ${({ number }) => `spin ${number + 1}s linear infinite`};
+  -moz-animation: ${({ number }) => `spin ${number + 1}s linear infinite`};
+  animation: ${({ number }) => `spin ${number + 1}s linear infinite`};
   svg {
     width: 120px;
   }
@@ -60,7 +71,7 @@ export const Container = styled.div`
   gap: 10px;
   max-width: 40vw;
   justify-self: flex-end;
-  margin: 0 0 0 10vw;
+  /* margin: 0 0 0 10vw; */
   padding: 4px;
 `;
 
@@ -71,12 +82,16 @@ export const Wrapper = styled.div`
   gap: 5%;
   justify-content: center;
   height: 100vh;
-  width: 90vw;
-
-  /* align-items: center; */
+  align-items: center;
 `;
 export const List = styled(Text)`
   text-align: left;
   font-size: 25px;
   /* background: #fff; */
+`;
+
+export const ButtonWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
 `;

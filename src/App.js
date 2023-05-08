@@ -44,7 +44,7 @@ export const App = () => {
 
   return (
     <PageWrapper>
-      <Header />
+      <Header currentElem={currentElem} elems={elems}/>
       <Element name="main">
         <MainDisplay animation={currentElem === elems.indexOf('main')}/>
       </Element>
@@ -55,7 +55,7 @@ export const App = () => {
         <GlassReception />
       </Element>
       <Element name="plastic">
-        <PlasticAcceptance />
+        <PlasticAcceptance animation={currentElem === elems.indexOf('plastic')}/>
       </Element>
       <Element name="metal">
         <MetalReception />

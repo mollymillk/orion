@@ -8,43 +8,43 @@ export const BottleOne = () => (
   >
     <path
       d="M15 21.5597C15 18.1105 16.8097 14.9142 19.7674 13.1395C19.9117 13.053 20 12.897 20 12.7288V4H28V12.7288C28 12.897 28.0883 13.053 28.2326 13.1395C31.1903 14.9142 33 18.1105 33 21.5597V42C33 43.1046 32.1046 44 31 44H17C15.8954 44 15 43.1046 15 42V21.5597Z"
-      fill="#2F88FF"
-      stroke="#000000"
-      stroke-width="4"
+      fill="#A3B18A"
+      stroke="#293D33"
+      stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M20 10L28 10"
-      stroke="white"
-      stroke-width="4"
+      stroke="#293D33"
+      stroke-width="3"
       stroke-linecap="round"
     />
     <path
       d="M33 23H24V38H33"
-      stroke="white"
-      stroke-width="4"
+      stroke="#293D33"
+      stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M33 40V21"
-      stroke="#000000"
-      stroke-width="4"
+      stroke="#293D33"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M20 12V8"
-      stroke="#000000"
-      stroke-width="4"
+      stroke="#293D33"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M28 12V8"
-      stroke="#000000"
-      stroke-width="4"
+      stroke="#293D33"
+      stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -61,8 +61,8 @@ export const BottleTwo = () => (
   >
     <path
       d="M21.1875 10H26.8125L33 21.1806V44H15V21.1806L21.1875 10Z"
-      stroke="#000000"
-      stroke-width="4"
+      stroke="#344E41"
+      stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -71,9 +71,9 @@ export const BottleTwo = () => (
       y="4"
       width="8"
       height="6"
-      fill="#2F88FF"
-      stroke="#000000"
-      stroke-width="4"
+      fill="#A3B18A"
+      stroke="#344E41"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -83,9 +83,9 @@ export const BottleTwo = () => (
       width="6"
       height="12"
       rx="3"
-      fill="#2F88FF"
-      stroke="#000000"
-      stroke-width="4"
+      fill="#3A5A40"
+      stroke="#344E41"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -98,6 +98,7 @@ export const BottleThree = () => (
     height="800px"
     viewBox="-74.17 0 235.04 235.04"
     xmlns="http://www.w3.org/2000/svg"
+    fill="#3A5A40"
   >
     <defs>{/* <style>.cls-1{fill:#ffffff;}</style> */}</defs>
 
@@ -255,9 +256,16 @@ export const BottleFour = () => (
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-miterlimit="10"
-          stroke-width="4"
+          stroke-width="1"
         />
       </g>
     </g>
+  </svg>
+);
+
+export const BackArrow = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
+    <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z" />
   </svg>
 );

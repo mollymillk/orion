@@ -24,6 +24,7 @@ export const ItemWrapper = styled.div`
   gap: 20px;
   max-width: 300px;
   opacity: ${({ state }) => (state === "entered" ? 1 : 0)};
+  /* display: ${({ state }) => (state === "entering" || state === "entered" ? 'flex' : 'none')}; */
   transform: translateX(${({ state }) => (state === "entered" ? 0 : -400)}px);
   cursor: pointer;
   p {

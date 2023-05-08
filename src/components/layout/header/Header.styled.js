@@ -27,4 +27,7 @@ export const ListItem = styled.div`
     &:hover {
         opacity: 0.7;
     }
+    a {
+        font-weight: ${({active}) => active ? '700' : '500'};
+    }
 `
