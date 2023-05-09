@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Text } from "../../ui/text/text.styled";
-import main from '../../../assets/img/main.jpg';
+import main from "../../../assets/img/main.jpg";
 
 export const DisplayWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  background: #EEECE8;
+  background: #eeece8;
   display: flex;
   flex-direction: row;
 `;
@@ -20,18 +20,14 @@ export const MainPhoto = styled.div`
   opacity: ${({ state }) => (state === "entered" ? 0 : 1)};
   background: url(${main});
   background-size: cover;
-  transform: translateX(
-    ${({ state }) => (state === "entered" ? -400 : 0)}px
-  );
+  transform: translateX(${({ state }) => (state === "entered" ? -400 : 0)}px);
 `;
 
 export const TextWrapper = styled.div`
   transition-property: transform, opacity;
   transition-duration: 1s, 2s;
   opacity: ${({ state }) => (state === "entered" ? 0 : 1)};
-  transform: translateX(
-    ${({ state }) => (state === "entered" ? -400 : 0)}px
-  );
+  transform: translateX(${({ state }) => (state === "entered" ? -400 : 0)}px);
   margin: 30px;
   display: flex;
   flex-direction: column;
@@ -43,4 +39,24 @@ export const TextWrapper = styled.div`
 
 export const MainText = styled(Text)`
   text-align: center;
-`
+`;
+
+export const IconButtonsWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+  ${({ scrolled }) =>
+    scrolled &&
+    css`
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 150px;
+      left: -150px;
+      z-index: 100;
+    `}
+`;
+
+export const LinkInfo = styled(Text)`
+  min-height: 30px;
+  transition-property: opacity;
+`;

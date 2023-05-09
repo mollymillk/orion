@@ -15,3 +15,18 @@ export const Button = styled.button`
     opacity: 0.7;
   }
 `;
+
+export const IconButton = styled.button`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: ${({buttonColor}) => buttonColor};
+  transition: background 0.4s ease;
+  &:hover {
+    background: ${({hoverColor}) => hoverColor};
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+`

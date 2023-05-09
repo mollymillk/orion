@@ -10,6 +10,7 @@ import {
   scroller,
 } from "react-scroll";
 import { useEffect, useState } from "react";
+import { IconButtons } from "./components/layout/icon-buttons/IconButtons";
 
 import { Header } from "./components/layout/header/Header";
 import { MainDisplay } from "./components/displays/main-display/MainDisplay";
@@ -26,6 +27,7 @@ export const App = () => {
   const elems = ['main', 'taxi', 'glass', 'plastic', 'metal', 'paper', 'places']
   const [scrollPosition, setScrollPosition] = useState(0);
   const { height } = useWindowDimensions();
+  const [hoveredLink, setHoveredLink] = useState("default");
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -66,6 +68,7 @@ export const App = () => {
       <Element name="places">
         <PlacesToRent />
       </Element>
+      <IconButtons animation={!(currentElem === elems.indexOf('main'))} setHoveredLink={setHoveredLink}/>
     </PageWrapper>
   );
 };
