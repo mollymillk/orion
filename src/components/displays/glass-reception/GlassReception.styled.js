@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Text } from "../../ui/text/text.styled";
 
 export const MainImage = styled.div`
@@ -36,6 +36,25 @@ export const List = styled(Text)`
     height: 25px;
   }
 `;
+
+export const ListItem = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  svg {
+    /* color: #4c956c; */
+    ${({green}) => green && css`
+      color: #4c956c;
+    `}
+    ${({red}) => red && css`
+      color: #f25251;
+    `}
+  }
+`
+
+// export const ItemDescription = styled.p`
+
+// `
 
 export const GLassImage = styled.img`
   border-radius: 5%;

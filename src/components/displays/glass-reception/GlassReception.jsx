@@ -6,13 +6,28 @@ import {
   Container,
   List,
   GLassImage,
+  ListItem,
 } from "./GlassReception.styled";
 import { useState } from "react";
-import glass from '../../../assets/img/glass.jpg';
+import glass from "../../../assets/img/glass.jpg";
 import { UpMark } from "../../ui/icons/Icons";
+import { Modal } from "antd";
 
 export const GlassReception = () => {
   const [step, setStep] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   const handleSetNextStep = () => setStep(step + 1);
   return (
@@ -38,31 +53,64 @@ export const GlassReception = () => {
       )}
       {step === 2 && (
         <>
-        <Container>
-          <Heading>Принимаем</Heading>
-          <List>
-            <UpMark/> Стеклотара (любые стеклянные бутылки, банки, пузырьки,
-            флаконы)
-            <br />
-            <UpMark/> Бой стекла
-            <br />
-            <UpMark/>Листовое стекло
-            <br />
-            <UpMark/> Обычные оконные стекла без рамы
-          </List>
-        {/* </Container>
+          <Container>
+            <Heading>Принимаем</Heading>
+            <List>
+              <ListItem green>
+                <UpMark />
+                <p>
+                  Стеклотара (любые стеклянные бутылки, банки, пузырьки,
+                  флаконы)
+                </p>
+              </ListItem>
+              <ListItem green>
+                <UpMark /> <p>Бой стекла</p>
+              </ListItem>
+              <ListItem green>
+                <UpMark />
+                <p>Листовое стекло</p>
+              </ListItem>
+              <ListItem green>
+                <UpMark /> <p>Обычные оконные стекла без рамы</p>
+              </ListItem>
+            </List>
+            {/* </Container>
         <Container> */}
-          <Heading>Не принимаем</Heading>
-          <List>
-            &#8226;Триплекс и стеклопакеты
-            <br />
-            &#8226;Автостекла
-            <br />
-          </List>
-        </Container>
+            <Heading>Не принимаем</Heading>
+            <List>
+              <ListItem red>
+                <UpMark /> <p>Триплекс и стеклопакеты</p>
+              </ListItem>
+              <ListItem red>
+                <UpMark /> <p>Автостекла</p>
+              </ListItem>
+            </List>
+            <Button buttonWidth="300px" font="20px">
+              Куда сдавать?
+            </Button>
+            <Button buttonWidth="300px" font="20px" onClick={showModal}>
+              Правила
+            </Button>
+            <Modal
+              title="МУСОР ПРИНИМАЕТСЯ ТОЛЬКО В ЧИСТОМ ВИДЕ!"
+              open={isModalOpen}
+              onOk={handleOk}
+              onCancel={handleCancel}
+              footer={null}
+              centered
+            >
+                {/* <Heading>МУСОР ПРИНИМАЕТСЯ ТОЛЬКО В ЧИСТОМ ВИДЕ!</Heading> */}
+                <p>
+                  Все бутылки должны быть чистыми и лишены стороннего запаха.
+                  Бутылки из под масла должны быть хорошо промыты. Вся сдаваемая
+                  на переработку стеклотара должна быть лишена каких-либо
+                  органических примесей.
+                </p>
+            </Modal>
+          </Container>
         </>
       )}
-      <GLassImage src={glass}/>
+      <GLassImage src={glass} />
     </DisplayWrapper>
   );
 };
