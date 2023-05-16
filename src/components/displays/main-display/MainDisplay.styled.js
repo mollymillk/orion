@@ -35,6 +35,7 @@ export const TextWrapper = styled.div`
   justify-content: center;
   width: 50%;
   gap: 20px;
+  position: relative;
 `;
 
 export const MainText = styled(Text)`
@@ -59,4 +60,23 @@ export const IconButtonsWrapper = styled.div`
 export const LinkInfo = styled(Text)`
   min-height: 30px;
   transition-property: opacity;
+`;
+
+export const ArrowButton = styled.button`
+  display: flex;
+  position: fixed;
+  align-items: center;
+  left: 40px;
+  bottom: 20px;
+  z-index: 10;
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+  p {
+    color: #1D4930;
+  }
+  :hover {
+    opacity: 0.8;
+  }
 `;

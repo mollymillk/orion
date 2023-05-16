@@ -1,6 +1,6 @@
 import { IconButton } from "../../ui/button/Button.styled";
 import { IconButtonsWrapper } from "./IconButtons.styled";
-import { TelegramIcon, WhatAppIcon, VKIcon } from "../../ui/icons/Icons";
+import { TelegramIcon, WhatAppIcon, VKIcon, PhoneIcon } from "../../ui/icons/Icons";
 
 export const IconButtons = ({ animation, setHoveredLink }) => {
   return (
@@ -8,6 +8,15 @@ export const IconButtons = ({ animation, setHoveredLink }) => {
       scrolled={animation}
       onMouseLeave={() => setHoveredLink("default")}
     >
+      <IconButton
+        buttonColor='#53A275'
+        hoverColor='#4fb37a'
+        font="20px"
+        size='30px'
+        phone
+        scrolled={animation}>
+        <PhoneIcon/>
+      </IconButton>
       <IconButton
         buttonColor="#0088cc"
         hoverColor="#1298db"

@@ -25,8 +25,11 @@ export const IconButton = styled.button`
   &:hover {
     background: ${({hoverColor}) => hoverColor};
   }
+  display: ${({phone, scrolled}) => phone && !scrolled ? 'none' : 'flex'};
+  justify-content: center;
+  align-items: center;
   svg {
-    width: 50px;
-    height: 50px;
+    width: ${({size}) => size || '50px'};
+    height: ${({size}) => size || '50px'};
   }
 `

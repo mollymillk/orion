@@ -46,7 +46,7 @@ export const PlasticAcceptance = ({ animation }) => {
                     отходов позволяет сэкономить тонны известняка, песка и соды.
                   </List>
                 </Container>
-                <SvgWrapper number={0}>
+                {/* <SvgWrapper number={0}>
                   <BottleOne />
                 </SvgWrapper>
                 <SvgWrapper number={1}>
@@ -54,7 +54,7 @@ export const PlasticAcceptance = ({ animation }) => {
                 </SvgWrapper>
                 <SvgWrapper number={2}>
                   <BottleThree />
-                </SvgWrapper>
+                </SvgWrapper> */}
                 <ButtonWrapper buttonWidth="300px">
                   <Button font="20px" onClick={handleSetNextStep}>
                     Что принимаем?

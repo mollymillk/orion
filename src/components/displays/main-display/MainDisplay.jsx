@@ -9,17 +9,24 @@ import {
   DisplayWrapper,
   MainText,
   IconButtonsWrapper,
-  LinkInfo
+  LinkInfo,
+  ArrowButton,
 } from "./MainDisplay.styled";
-import { TelegramIcon, VKIcon, WhatAppIcon } from "../../ui/icons/Icons";
+import {
+  TelegramIcon,
+  UpArrowIcon,
+  VKIcon,
+  WhatAppIcon,
+} from "../../ui/icons/Icons";
 import { IconButtons } from "../../layout/icon-buttons/IconButtons";
+import { Link } from "react-scroll";
 
 const linksInfo = {
-  telegram: 'Написать в Telegram',
-  whatsapp: 'Написать в WhatsApp',
-  vk: 'Группа VK',
-  default: ''
-}
+  telegram: "Написать в Telegram",
+  whatsapp: "Написать в WhatsApp",
+  vk: "Группа VK",
+  default: "",
+};
 
 export const MainDisplay = ({ animation }) => {
   const [animate, setAnimate] = useState(true);
@@ -31,7 +38,6 @@ export const MainDisplay = ({ animation }) => {
       setAnimate(false);
     }, 500);
   }, []);
-
 
   return (
     <DisplayWrapper>
@@ -53,13 +59,19 @@ export const MainDisplay = ({ animation }) => {
             <Button buttonWidth={"200px"} font="20px">
               Позвонить нам
             </Button>
-            <IconButtons animation={false} setHoveredLink={setHoveredLink}/>
-            <LinkInfo>{
-              linksInfo[hoveredLink]
-            }</LinkInfo>
+            <IconButtons animation={false} setHoveredLink={setHoveredLink} />
+            <LinkInfo>{linksInfo[hoveredLink]}</LinkInfo>
           </TextWrapper>
         )}
       </Transition>
+      {!animation && (
+        <Link to="main" spy={true} smooth={true} duration={500}>
+          <ArrowButton>
+            <UpArrowIcon />
+            <p>Наверх</p>
+          </ArrowButton>
+        </Link>
+      )}
     </DisplayWrapper>
   );
 };
