@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 import glass from "../../../assets/img/glass.jpg";
 import { UpMark } from "../../ui/icons/Icons";
-import { Modal } from "antd";
+import { Modal } from "../../ui/modal/Modal";
 
 export const GlassReception = () => {
   const [step, setStep] = useState(1);
@@ -74,8 +74,6 @@ export const GlassReception = () => {
                 <UpMark /> <p>Обычные оконные стекла без рамы</p>
               </ListItem>
             </List>
-            {/* </Container>
-        <Container> */}
             <Heading>Не принимаем</Heading>
             <List>
               <ListItem red>
@@ -91,22 +89,7 @@ export const GlassReception = () => {
             <Button buttonWidth="300px" font="20px" onClick={showModal}>
               Правила
             </Button>
-            <Modal
-              title="МУСОР ПРИНИМАЕТСЯ ТОЛЬКО В ЧИСТОМ ВИДЕ!"
-              open={isModalOpen}
-              onOk={handleOk}
-              onCancel={handleCancel}
-              footer={null}
-              centered
-            >
-                {/* <Heading>МУСОР ПРИНИМАЕТСЯ ТОЛЬКО В ЧИСТОМ ВИДЕ!</Heading> */}
-                <p>
-                  Все бутылки должны быть чистыми и лишены стороннего запаха.
-                  Бутылки из под масла должны быть хорошо промыты. Вся сдаваемая
-                  на переработку стеклотара должна быть лишена каких-либо
-                  органических примесей.
-                </p>
-            </Modal>
+            <Modal isModalOpen={isModalOpen} handleHide={handleCancel}/>
           </Container>
         </>
       )}

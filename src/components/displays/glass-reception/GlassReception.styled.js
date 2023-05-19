@@ -42,7 +42,6 @@ export const ListItem = styled.div`
   gap: 10px;
   align-items: center;
   svg {
-    /* color: #4c956c; */
     ${({green}) => green && css`
       color: #4c956c;
     `}
@@ -52,9 +51,6 @@ export const ListItem = styled.div`
   }
 `
 
-// export const ItemDescription = styled.p`
-
-// `
 
 export const GLassImage = styled.img`
   border-radius: 5%;

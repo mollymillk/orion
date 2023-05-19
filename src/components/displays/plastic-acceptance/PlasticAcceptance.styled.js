@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { Text } from "../../ui/text/text.styled";
 
 const positions = [
@@ -23,18 +23,11 @@ const positions = [
 export const Row = styled.div`
   position: relative;
   display: flex;
-  /* justify-content: ${({ content }) => `flex-${content}`}; */
   justify-content: space-evenly;
   opacity: ${({ state }) => (state === "entered" ? 1 : 0)};
   transform: translateX(${({ state }) => (state === "entered" ? 0 : -400)}px);
-  /* display: ${({ state }) => ((state === "entering" || state === "entered") ? 'flex' : 'none')}; */
   transition-property: transform, opacity;
   transition-duration: 2s, 1s;
-  /* align-items: center; */
-  /* svg {
-    width: 50px;
-    height: 50px;
-  } */
 `;
 
 export const SvgWrapper = styled.div`
@@ -69,9 +62,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 40vw;
+  max-width: 45vw;
   justify-self: flex-end;
-  /* margin: 0 0 0 10vw; */
   padding: 4px;
 `;
 
@@ -87,11 +79,35 @@ export const Wrapper = styled.div`
 export const List = styled(Text)`
   text-align: left;
   font-size: 25px;
-  /* background: #fff; */
 `;
 
 export const ButtonWrapper = styled.div`
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 10vh;
+
 `;
+
+export const ListItem = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  p {
+    max-width: 40vw;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    ${({green}) => green && css`
+      color: #4c956c;
+    `}
+    ${({red}) => red && css`
+      color: #f25251;
+    `}
+  }
+`
