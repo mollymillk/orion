@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/orion/static/css/main.995aa126.css",
-    "main.js": "/orion/static/js/main.f1aa177a.js",
+    "main.js": "/orion/static/js/main.d77f7275.js",
     "static/media/RoundedMplus1c-ExtraBold.svg": "/orion/static/media/RoundedMplus1c-ExtraBold.b048b3de7b7bbf95b196.svg",
     "static/media/RoundedMplus1c-Bold.svg": "/orion/static/media/RoundedMplus1c-Bold.456c0675e439dee3c699.svg",
     "static/media/RoundedMplus1c-Black.svg": "/orion/static/media/RoundedMplus1c-Black.f27dc6925d8380e549ec.svg",
@@ -25,6 +25,7 @@
     "static/media/RoundedMplus1c-Thin.ttf": "/orion/static/media/RoundedMplus1c-Thin.6c8363550f748124a009.ttf",
     "static/media/RoundedMplus1c-ExtraBold.woff": "/orion/static/media/RoundedMplus1c-ExtraBold.3afb29a67a63683b9567.woff",
     "static/media/RoundedMplus1c-Bold.woff": "/orion/static/media/RoundedMplus1c-Bold.9b725b8ab9b6548e829d.woff",
+    "static/media/paper.jpg": "/orion/static/media/paper.f083d65b18745320df23.jpg",
     "static/media/RoundedMplus1c-Black.woff": "/orion/static/media/RoundedMplus1c-Black.c8a200d139770b96c9a8.woff",
     "static/media/RoundedMplus1c-Medium.woff": "/orion/static/media/RoundedMplus1c-Medium.186bd6a0e30c370de27a.woff",
     "static/media/RoundedMplus1c-Regular.woff": "/orion/static/media/RoundedMplus1c-Regular.834fd62c8bee980c7213.woff",
@@ -39,15 +40,16 @@
     "static/media/RoundedMplus1c-Thin.woff2": "/orion/static/media/RoundedMplus1c-Thin.5a2b24ebd8bbf0395282.woff2",
     "static/media/main.jpg": "/orion/static/media/main.40efbed31eecadd3b3b8.jpg",
     "static/media/kids.jpg": "/orion/static/media/kids.920ea99e686e929f1541.jpg",
+    "static/media/metal.png": "/orion/static/media/metal.af6cfc69d3739d75caca.png",
     "static/media/cargo.jpg": "/orion/static/media/cargo.b1f1e9ef70623638d03a.jpg",
     "static/media/events.jpg": "/orion/static/media/events.7e80f124342b0647d17a.jpg",
     "static/media/glass.jpg": "/orion/static/media/glass.14bc305dd657c9f75100.jpg",
     "index.html": "/orion/index.html",
     "main.995aa126.css.map": "/orion/static/css/main.995aa126.css.map",
-    "main.f1aa177a.js.map": "/orion/static/js/main.f1aa177a.js.map"
+    "main.d77f7275.js.map": "/orion/static/js/main.d77f7275.js.map"
   },
   "entrypoints": [
     "static/css/main.995aa126.css",
-    "static/js/main.f1aa177a.js"
+    "static/js/main.d77f7275.js"
   ]
 }
