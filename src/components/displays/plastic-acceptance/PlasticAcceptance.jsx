@@ -9,7 +9,7 @@ import {
   ButtonWrapper,
   ListItem,
 } from "./PlasticAcceptance.styled";
-import { Heading, Text } from "./../../ui/text/text.styled";
+import { Heading } from "./../../ui/text/text.styled";
 import {
   BackArrow,
   BottleFour,

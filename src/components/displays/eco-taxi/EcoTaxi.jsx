@@ -52,7 +52,6 @@ export const EcoTaxi = ({ animation }) => {
                   <Heading textColor="#fff">Просвещение</Heading>
                 )}
               </ImageWrapper>
-
               <Text visible={visible === "second"}>
                 Экоуроки для детей, экодворы для жителей
               </Text>

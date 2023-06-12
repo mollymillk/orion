@@ -8,6 +8,12 @@ export const DisplayWrapper = styled.div`
   background: #eeece8;
   display: flex;
   flex-direction: row;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 export const MainPhoto = styled.div`
@@ -38,7 +44,8 @@ export const TextWrapper = styled.div`
   position: relative;
 `;
 
-export const MainText = styled(Text)`
+// export const MainText = styled(Text)`
+export const MainText = styled.div`
   text-align: center;
 `;
 

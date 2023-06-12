@@ -2,7 +2,7 @@ import { Transition } from "react-transition-group";
 import { useEffect, useState } from "react";
 
 import { Button, IconButton } from "../../ui/button/Button.styled";
-import { Text, Heading } from "../../ui/text/text.styled";
+import { Heading, Text } from "../../ui/text/text.styled";
 import {
   TextWrapper,
   MainPhoto,

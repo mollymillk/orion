@@ -20,7 +20,6 @@ export const Modal = ({isModalOpen, handleHide}) => {
           под масла должны быть хорошо промыты. Вся сдаваемая на переработку
           стеклотара должна быть лишена каких-либо органических примесей.
         </Text>
-
         </ContentWrapper>
       </ModalContainer>
     </Wrapper>

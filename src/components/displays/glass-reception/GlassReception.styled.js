@@ -20,6 +20,12 @@ export const DisplayWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 5%;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 export const Container = styled.div`
