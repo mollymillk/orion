@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import { Text } from '../../ui/text/text.styled';
+import styled, { css } from "styled-components";
+import { Text } from "../../ui/text/text.styled";
 
 export const MainImage = styled.div`
   transition-property: transform, opacity;
@@ -26,6 +26,10 @@ export const DisplayWrapper = styled.div`
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+  @media screen and (max-width: 820px) {
+    align-items: flex-start;
+    padding-top: 4vh;
+  }
 `;
 
 export const Container = styled.div`
@@ -33,6 +37,12 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   width: 45vw;
+  @media screen and (max-width: 820px) {
+    width: 90vw;
+    > button {
+      width: 171px;
+    }
+  }
 `;
 
 export const List = styled(Text)`
@@ -48,15 +58,23 @@ export const ListItem = styled.div`
   gap: 10px;
   align-items: center;
   svg {
-    ${({green}) => green && css`
-      color: #4c956c;
-    `}
-    ${({red}) => red && css`
-      color: #f25251;
-    `}
+    ${({ green }) =>
+      green &&
+      css`
+        color: #4c956c;
+      `}
+    ${({ red }) =>
+      red &&
+      css`
+        color: #f25251;
+      `}
   }
-`
-
+  @media screen and (max-width: 820px) {
+    p {
+      width: 100%;
+    }
+  }
+`;
 
 export const GLassImage = styled.img`
   border-radius: 5%;
@@ -64,4 +82,25 @@ export const GLassImage = styled.img`
   height: 50vh;
   object-fit: cover;
   margin-left: 40px;
-`
+  @media screen and (max-width: 820px) {
+    display: none;
+  }
+`;
+
+export const MobileGLassImage = styled.img`
+  display: none;
+  border-radius: 5%;
+  object-fit: cover;
+  width: 40%;
+  height: 32vh;
+  @media screen and (max-width: 820px) {
+    display: block;
+  }
+`;
+
+export const HeadingContainer = styled.div`
+  @media screen and (max-width: 820px) {
+    display: flex;
+    gap: 10px;
+  }
+`;

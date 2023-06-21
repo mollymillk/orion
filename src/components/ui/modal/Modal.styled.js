@@ -29,7 +29,7 @@ export const ButtonWrapper = styled.div`
   position: relative;
 `;
 
-export const CLoseButton = styled.button`
+export const CloseButton = styled.button`
   :hover {
     opacity: 0.8;
   }
@@ -40,6 +40,11 @@ export const CLoseButton = styled.button`
   }
   position: absolute;
   right: 0;
+  @media screen and (max-width: 820px) {
+    width: 26px;
+    width: 26px;
+    height: 26px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -56,4 +61,8 @@ export const ModalContainer = styled.div`
   opacity: 1;
   max-width: 45vw;
   padding: 20px;
+  @media screen and (max-width: 820px) {
+    max-width: 80vw;
+    padding: 16px;
+  }
 `;

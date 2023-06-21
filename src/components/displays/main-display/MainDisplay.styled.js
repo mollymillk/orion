@@ -14,6 +14,10 @@ export const DisplayWrapper = styled.div`
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    margin-top: 10vh;
+  }
 `;
 
 export const MainPhoto = styled.div`
@@ -27,6 +31,12 @@ export const MainPhoto = styled.div`
   background: url(${main});
   background-size: cover;
   transform: translateX(${({ state }) => (state === "entered" ? -400 : 0)}px);
+  @media screen and (max-width: 820px) {
+    margin: 1vh auto 0;
+    width: 90%;
+    height: 250px;
+    border-radius: 35% 35% 35% 35%/50% 50% 50% 50%;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -42,6 +52,11 @@ export const TextWrapper = styled.div`
   width: 50%;
   gap: 20px;
   position: relative;
+  @media screen and (max-width: 820px) {
+    width: 90%;
+    margin: 0 auto;
+    gap: 9px;
+  }
 `;
 
 // export const MainText = styled(Text)`
@@ -81,7 +96,7 @@ export const ArrowButton = styled.button`
     height: 25px;
   }
   p {
-    color: #1D4930;
+    color: #1d4930;
   }
   :hover {
     opacity: 0.8;

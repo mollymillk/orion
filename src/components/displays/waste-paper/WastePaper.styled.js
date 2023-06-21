@@ -33,7 +33,20 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   width: 45vw;
+  @media screen and (max-width: 820px) {
+    width: 80vw;
+    > button {
+      width: 175px;
+    }
+  }
 `;
+
+export const MobileRow = styled.div`
+  @media screen and (max-width: 820px) {
+    display: flex;
+    gap: 1vw;
+  }
+`
 
 export const List = styled(Text)`
   text-align: left;
@@ -69,4 +82,18 @@ export const GLassImage = styled.img`
   height: 50vh;
   object-fit: cover;
   margin-left: 40px;
+  @media screen and (max-width: 820px) {
+    display: none;
+  }
+`
+
+export const MobileGLassImage = styled.img`
+  border-radius: 5%;
+  width: 35vw;
+  height: 35vw;
+  object-fit: cover;
+  display: none;
+  @media screen and (max-width: 820px) {
+    display: block;
+  }
 `

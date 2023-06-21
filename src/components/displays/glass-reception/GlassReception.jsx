@@ -7,6 +7,8 @@ import {
   List,
   GLassImage,
   ListItem,
+  MobileGlassImage,
+  TextContainer
 } from "./GlassReception.styled";
 import { useState } from "react";
 import glass from "../../../assets/img/glass.jpg";
@@ -21,10 +23,6 @@ export const GlassReception = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
   const handleCancel = () => {
     setIsModalOpen(false);
   };
@@ -35,11 +33,16 @@ export const GlassReception = () => {
       {step === 1 && (
         <Container>
           <Heading>Зачем сдавать стекло на переработку?</Heading>
+          <TextContainer>
           <Text>
             Переработка стекла — важная отрасль в утилизации отходов,
             необходимая для защиты окружающей среды и сохранения природных
             ресурсов.
+
           </Text>
+
+      <MobileGlassImage src={glass} />
+          </TextContainer>
           <List>
             🔻 Стекло не подвергается биологическому разложению <br />
             🔻 Разбитое стекло, попавшее в окружающую среду, представляет угрозу

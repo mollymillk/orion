@@ -33,6 +33,12 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   width: 45vw;
+  @media screen and (max-width: 820px) {
+    width: 80vw;
+    > button {
+      width: 165px;
+    }
+  }
 `;
 
 export const List = styled(Text)`
@@ -48,19 +54,48 @@ export const ListItem = styled.div`
   gap: 10px;
   align-items: center;
   svg {
-    ${({green}) => green && css`
-      color: #4c956c;
-    `}
-    ${({red}) => red && css`
-      color: #f25251;
-    `}
+    ${({ green }) =>
+      green &&
+      css`
+        color: #4c956c;
+      `}
+    ${({ red }) =>
+      red &&
+      css`
+        color: #f25251;
+      `}
   }
-`
-
+  @media screen and (max-width: 820px) {
+    p {
+      width: 100%;
+    }
+  }
+`;
 
 export const GLassImage = styled.img`
   border-radius: 5%;
   width: 25vw;
   height: 50vh;
   object-fit: cover;
+  @media screen and (max-width: 820px) {
+    display: none;
+  }
+`;
+
+export const MobileGlassImage = styled.img`
+  display: none;
+  border-radius: 5%;
+  width: 35vw;
+  height: 18vh;
+  object-fit: cover;
+  @media screen and (max-width: 820px) {
+    display: block;
+  }
+`;
+
+export const TextContainer = styled.div`
+  @media screen and (max-width: 820px) {
+    display: flex;
+    gap: 7vw;
+  }
 `

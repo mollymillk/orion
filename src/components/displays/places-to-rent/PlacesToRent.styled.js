@@ -12,6 +12,11 @@ export const DisplayWrapper = styled.div`
   scrollbar-width: none;
   justify-content: center;
   gap: 30px;
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 `;
 
 export const MapWrapper = styled.div`
@@ -26,6 +31,15 @@ export const MapWrapper = styled.div`
     width: 40vw;
     height: 50vh;
   }
+  @media screen and (max-width: 820px) {
+    width: 100%;
+    height: unset;
+    padding: 16px;
+    .map {
+      width: 90vw;
+      height: 35vh;
+    }
+  }
 `;
 
 export const PlacesWrapper = styled.div`
@@ -33,6 +47,10 @@ export const PlacesWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+  @media screen and (max-width: 820px) {
+    padding: 16px;
+    gap: 10px;
+  }
 `;
 
 export const PlacesItem = styled.div`
@@ -44,5 +62,14 @@ export const PlacesItem = styled.div`
   }
   p {
     font-size: 17px;
+  }
+  @media screen and (max-width: 820px) {
+    h1 {
+    font-size: 16px;
+    text-align: left;
+  }
+  p {
+    font-size: 12px;
+  }
   }
 `;

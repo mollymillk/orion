@@ -7,6 +7,8 @@ import {
   List,
   GLassImage,
   ListItem,
+  MobileGLassImage,
+  HeadingContainer,
 } from "./MetalReception.styled";
 import { useState } from "react";
 import metal from "../../../assets/img/metal.png";
@@ -21,10 +23,6 @@ export const MetalReception = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
   const handleCancel = () => {
     setIsModalOpen(false);
   };
@@ -36,12 +34,17 @@ export const MetalReception = () => {
       {step === 1 && (
         <>
           <Container>
-            <Heading>Зачем сдавать металл на переработку?</Heading>
-            <Text>
-              Металлолом — это категория отходов и сплавов, которые вышли из
-              эксплуатации. Но это не значит, что они больше не могут принести
-              пользу!
-            </Text>
+            <HeadingContainer>
+              <div>
+                <Heading>Зачем сдавать металл на переработку?</Heading>
+                <Text>
+                  Металлолом — это категория отходов и сплавов, которые вышли из
+                  эксплуатации. Но это не значит, что они больше не могут
+                  принести пользу!
+                </Text>
+              </div>
+              <MobileGLassImage src={metal} />
+            </HeadingContainer>
             <List>
               ✅ В промышленности есть целое направление, которое занимается
               переработкой металла <br />

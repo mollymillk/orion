@@ -28,6 +28,9 @@ export const Row = styled.div`
   transform: translateX(${({ state }) => (state === "entered" ? 0 : -400)}px);
   transition-property: transform, opacity;
   transition-duration: 2s, 1s;
+  @media screen and (max-width: 820px) {
+    flex-direction: ${({mobileRow}) => !mobileRow && 'column'};
+  }
 `;
 
 export const SvgWrapper = styled.div`
@@ -65,6 +68,9 @@ export const Container = styled.div`
   max-width: 45vw;
   justify-self: flex-end;
   padding: 4px;
+  @media screen and (max-width: 820px) {
+    max-width: 85vw;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -79,6 +85,9 @@ export const Wrapper = styled.div`
 export const List = styled(Text)`
   text-align: left;
   font-size: 25px;
+  @media screen and (max-width: 820px) {
+    font-size: 12px;
+  } 
 `;
 
 export const ButtonWrapper = styled.div`
@@ -87,6 +96,9 @@ export const ButtonWrapper = styled.div`
   gap: 10px;
   flex-direction: column;
   margin-top: 10vh;
+  > button {
+    width: 175px;
+  }
 
 `;
 

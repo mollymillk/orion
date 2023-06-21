@@ -8,6 +8,8 @@ import {
   GLassImage,
   ListItem,
   ButtonsWrapper,
+  MobileGLassImage,
+  MobileRow,
 } from "./WastePaper.styled";
 import { useState } from "react";
 import paper from "../../../assets/img/paper.jpg";
@@ -20,10 +22,6 @@ export const WastePaper = () => {
 
   const showModal = () => {
     setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
   };
 
   const handleCancel = () => {
@@ -44,11 +42,14 @@ export const WastePaper = () => {
               первоклассная целлюлоза, ряд товаров можно выпускать из бумажных
               отходов.
             </Text>
-            <List>
-              ✅ 1 тонна макулатуры заменяет около 4 кубических метров
-              древесины, или 100 кг макулатуры спасают 1 дерево) и позволяет
-              уменьшить вырубку лесов.
-            </List>
+            <MobileRow>
+              <List>
+                ✅ 1 тонна макулатуры заменяет около 4 кубических метров
+                древесины, или 100 кг макулатуры спасают 1 дерево) и позволяет
+                уменьшить вырубку лесов.
+              </List>
+              <MobileGLassImage src={paper} />
+            </MobileRow>
             <Button buttonWidth="300px" font="20px" onClick={handleSetNextStep}>
               Что принимаем?
             </Button>

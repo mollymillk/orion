@@ -1,6 +1,6 @@
 import { CloseIcon } from "../icons/Icons";
 import { Heading, Text } from "../text/text.styled";
-import { ButtonWrapper, CLoseButton, ContentWrapper, ModalContainer, Wrapper } from "./Modal.styled";
+import { ButtonWrapper, CloseButton, ContentWrapper, ModalContainer, Wrapper } from "./Modal.styled";
 
 export const Modal = ({isModalOpen, handleHide}) => {
 
@@ -8,12 +8,11 @@ export const Modal = ({isModalOpen, handleHide}) => {
     <Wrapper active={isModalOpen} onClick={handleHide}>
       <ModalContainer>
         <ButtonWrapper>
-            <CLoseButton onClick={handleHide}>
+            <CloseButton onClick={handleHide}>
                 <CloseIcon/>
-            </CLoseButton>
+            </CloseButton>
         </ButtonWrapper>
         <ContentWrapper>
-
         <Heading>Мусор принимается только в чистом виде!</Heading>
         <Text>
           Все бутылки должны быть чистыми и лишены стороннего запаха. Бутылки из

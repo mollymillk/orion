@@ -12,6 +12,13 @@ export const ImageWrapper = styled.div`
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.2);
   background-blend-mode: ${({ visible }) => (visible ? "none" : "darken")};
+  @media screen and (max-width: 820px) {
+    height: 150px;
+    max-width: 55vw;
+    h1 {
+      display: none;
+    }
+  }
 `;
 export const ItemWrapper = styled.div`
   transition-property: transform, opacity;
@@ -27,6 +34,11 @@ export const ItemWrapper = styled.div`
   cursor: pointer;
   p {
     text-align: center;
+  }
+  @media screen and (max-width: 820px) {
+    flex-direction: row;
+    gap: 10px;
+    max-width: unset;
   }
 `;
 
@@ -44,6 +56,11 @@ export const DisplayWrapper = styled.div`
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px;
+  }
 `;
 
 export const Text = styled.p`
@@ -55,4 +72,10 @@ export const Text = styled.p`
   opacity: ${({ visible }) => (visible ? "1" : "0")};
   filter: unset;
   height: 90px;
+  @media screen and (max-width: 820px) {
+    opacity: 1;
+    font-size: 16px;
+    height: unset;
+    max-width: 30vw;
+  }
 `;

@@ -72,7 +72,7 @@ export const PlasticAcceptance = ({ animation }) => {
         <Transition in={animation && step === 2} timeout={200}>
           {(state) => (
             <Wrapper>
-              <Row state={state}>
+              <Row state={state} mobileRow>
                 <Container>
                   <Heading>Принимаем</Heading>
                   <List>
