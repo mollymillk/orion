@@ -2,6 +2,7 @@ import { Link } from "react-scroll";
 import { ListItem } from "./Header.styled";
 
 import { HeaderWrapper, LinksList } from "./Header.styled";
+import { MobileMenu } from "../../ui/mobile-menu/MobileMenu";
 
 export const Header = ({elems, currentElem}) => {
   return (
@@ -26,6 +27,7 @@ export const Header = ({elems, currentElem}) => {
           <Link to="places" spy={true} smooth={true} duration={500}>Куда сдавать?</Link>
         </ListItem>
       </LinksList>
+      <MobileMenu/>
     </HeaderWrapper>
   );
 };
