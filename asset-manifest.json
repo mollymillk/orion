@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/orion/static/css/main.995aa126.css",
-    "main.js": "/orion/static/js/main.d76adbaa.js",
+    "main.js": "/orion/static/js/main.3732bef7.js",
     "static/media/RoundedMplus1c-ExtraBold.svg": "/orion/static/media/RoundedMplus1c-ExtraBold.b048b3de7b7bbf95b196.svg",
     "static/media/RoundedMplus1c-Bold.svg": "/orion/static/media/RoundedMplus1c-Bold.456c0675e439dee3c699.svg",
     "static/media/RoundedMplus1c-Black.svg": "/orion/static/media/RoundedMplus1c-Black.f27dc6925d8380e549ec.svg",
@@ -43,13 +43,14 @@
     "static/media/metal.png": "/orion/static/media/metal.af6cfc69d3739d75caca.png",
     "static/media/cargo.jpg": "/orion/static/media/cargo.b1f1e9ef70623638d03a.jpg",
     "static/media/events.jpg": "/orion/static/media/events.7e80f124342b0647d17a.jpg",
+    "static/media/plastic.jpg": "/orion/static/media/plastic.27f1c56b9300eb0efabc.jpg",
     "static/media/glass.jpg": "/orion/static/media/glass.14bc305dd657c9f75100.jpg",
     "index.html": "/orion/index.html",
     "main.995aa126.css.map": "/orion/static/css/main.995aa126.css.map",
-    "main.d76adbaa.js.map": "/orion/static/js/main.d76adbaa.js.map"
+    "main.3732bef7.js.map": "/orion/static/js/main.3732bef7.js.map"
   },
   "entrypoints": [
     "static/css/main.995aa126.css",
-    "static/js/main.d76adbaa.js"
+    "static/js/main.3732bef7.js"
   ]
 }
