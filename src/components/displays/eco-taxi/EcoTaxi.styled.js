@@ -59,7 +59,8 @@ export const DisplayWrapper = styled.div`
   @media screen and (max-width: 820px) {
     flex-direction: column;
     justify-content: space-around;
-    padding: 16px;
+    // padding: 16px;
+    padding: 95px 16px;
   }
 `;
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -35,6 +35,16 @@ export const ListItem = styled.div`
     opacity: 0.7;
   }
   a {
-    font-weight: ${({ active }) => (active ? "700" : "500")};
+    font-weight: 500;
+    border-bottom: 3px solid #fff;
+    ${({ active }) =>
+      active &&
+      css`
+        font-weight: 600;
+        padding-bottom: 2px;
+        border-bottom: 3px solid #019321;
+      `}
+    transition-property: border-bottom;
+    transition-duration: 0.4s;
   }
 `;

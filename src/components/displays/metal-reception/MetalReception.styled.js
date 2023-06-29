@@ -28,7 +28,7 @@ export const DisplayWrapper = styled.div`
   scrollbar-width: none;
   @media screen and (max-width: 820px) {
     align-items: flex-start;
-    padding-top: 4vh;
+    padding-top: 25vh;
   }
 `;
 

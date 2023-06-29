@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import { Text } from '../../ui/text/text.styled';
+import styled, { css } from "styled-components";
+import { Text } from "../../ui/text/text.styled";
 
 export const MainImage = styled.div`
   transition-property: transform, opacity;
@@ -46,7 +46,7 @@ export const MobileRow = styled.div`
     display: flex;
     gap: 1vw;
   }
-`
+`;
 
 export const List = styled(Text)`
   text-align: left;
@@ -57,24 +57,32 @@ export const List = styled(Text)`
 `;
 
 export const ButtonsWrapper = styled.div`
-    display: flex;
-    gap: 10px;
-`
+  display: flex;
+  gap: 10px;
+`;
 
 export const ListItem = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
   svg {
-    ${({green}) => green && css`
-      color: #4c956c;
-    `}
-    ${({red}) => red && css`
-      color: #f25251;
-    `}
+    ${({ green }) =>
+      green &&
+      css`
+        color: #4c956c;
+      `}
+    ${({ red }) =>
+      red &&
+      css`
+        color: #f25251;
+      `}
   }
-`
-
+  @media screen and (max-width: 820px) {
+    > p {
+      width: 78vw;
+    }
+  }
+`;
 
 export const GLassImage = styled.img`
   border-radius: 5%;
@@ -85,7 +93,7 @@ export const GLassImage = styled.img`
   @media screen and (max-width: 820px) {
     display: none;
   }
-`
+`;
 
 export const MobileGLassImage = styled.img`
   border-radius: 5%;
@@ -96,4 +104,4 @@ export const MobileGLassImage = styled.img`
   @media screen and (max-width: 820px) {
     display: block;
   }
-`
+`;

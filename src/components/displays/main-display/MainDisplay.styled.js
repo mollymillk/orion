@@ -32,7 +32,7 @@ export const MainPhoto = styled.div`
   background-size: cover;
   transform: translateX(${({ state }) => (state === "entered" ? -400 : 0)}px);
   @media screen and (max-width: 820px) {
-    margin: 1vh auto 0;
+    margin: 11vh auto 0;
     width: 90%;
     height: 250px;
     border-radius: 35% 35% 35% 35%/50% 50% 50% 50%;

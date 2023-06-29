@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { Text } from "../../ui/text/text.styled";
 
 const positions = [
@@ -29,7 +29,7 @@ export const Row = styled.div`
   transition-property: transform, opacity;
   transition-duration: 2s, 1s;
   @media screen and (max-width: 820px) {
-    flex-direction: ${({mobileRow}) => !mobileRow && 'column'};
+    flex-direction: ${({ mobileRow }) => !mobileRow && "column"};
   }
 `;
 
@@ -69,7 +69,7 @@ export const Container = styled.div`
   justify-self: flex-end;
   padding: 4px;
   @media screen and (max-width: 820px) {
-    max-width: 85vw;
+    max-width: ${({ large }) => (large ? "85vw" : "50vw")};
   }
 `;
 
@@ -81,13 +81,16 @@ export const Wrapper = styled.div`
   justify-content: center;
   height: 100vh;
   align-items: center;
+  /* @media screen and (max-width: 820px) {
+    gap: 1vw;
+  } */
 `;
 export const List = styled(Text)`
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   @media screen and (max-width: 820px) {
     font-size: 12px;
-  } 
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -97,9 +100,32 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   margin-top: 10vh;
   > button {
-    width: 175px;
+    width: 275px;
   }
+  @media screen and (max-width: 820px) {
+    margin-top: 5vh;
+    > button {
+      width: 100%;
+    }
+  }
+`;
 
+export const TextWrapper = styled.div`
+  display: flex;
+`;
+
+export const DisplayImage = styled.img`
+  width: 10vw;
+  height: 10vw;
+  display: none;
+  @media screen and (max-width: 820px) {
+    margin-left: 1vw;
+    width: 31vw;
+    height: 43vw;
+    border-radius: 5%;
+    object-fit: cover;
+    display: block;
+  }
 `;
 
 export const ListItem = styled.div`
@@ -115,11 +141,15 @@ export const ListItem = styled.div`
     width: 20px;
     height: 20px;
     margin-top: 10px;
-    ${({green}) => green && css`
-      color: #4c956c;
-    `}
-    ${({red}) => red && css`
-      color: #f25251;
-    `}
+    ${({ green }) =>
+      green &&
+      css`
+        color: #4c956c;
+      `}
+    ${({ red }) =>
+      red &&
+      css`
+        color: #f25251;
+      `}
   }
-`
+`;

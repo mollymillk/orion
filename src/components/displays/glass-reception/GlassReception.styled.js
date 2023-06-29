@@ -98,4 +98,4 @@ export const TextContainer = styled.div`
     display: flex;
     gap: 7vw;
   }
-`
+`;

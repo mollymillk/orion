@@ -8,6 +8,8 @@ import {
   SvgWrapper,
   ButtonWrapper,
   ListItem,
+  TextWrapper,
+  DisplayImage,
 } from "./PlasticAcceptance.styled";
 import { Heading } from "./../../ui/text/text.styled";
 import {
@@ -21,6 +23,7 @@ import {
 import { Button } from "../../ui/button/Button.styled";
 import { Transition } from "react-transition-group";
 import { Modal } from "../../ui/modal/Modal";
+import plastic from "../../../assets/img/plastic.jpg";
 
 export const PlasticAcceptance = ({ animation }) => {
   const [step, setStep] = useState(1);
@@ -44,25 +47,40 @@ export const PlasticAcceptance = ({ animation }) => {
           {(state) => (
             <Wrapper>
               <Row content={"start"} state={state}>
-                <Container>
+                <Container large>
                   <Heading>Почему стоит сдавать пластик?</Heading>
+                  <TextWrapper>
+                    <List>
+                      Переработка пластика это актуальное направление в борьбе с
+                      растущими свалками. Пластиковые отходы сегодня стали
+                      серьезной проблемой.
+                      Каждый человек ежегодно
+                    выбрасывает на свалки около 88 кг полимерных изделий:
+                    посуду, пластмассовые бутылки и другую тару.
+                    </List>
+                    <DisplayImage src={plastic} />
+                  </TextWrapper>
                   <List>
-                    Повторное использование отходов стеклянной тары и стеклобоя
-                    позволяет сберечь и сэкономить природные ресурсы. Например,
-                    использование 10% стеклянного боя способствует экономии газа
-                    на 3%. Если человек, занимающийся производством стеклянной
-                    продукции, будет использовать стеклянный бой, то он снизит
-                    расход газа на 30%.
-                    <br />
-                    Помимо природного газа, повторное использование данных
-                    отходов позволяет сэкономить тонны известняка, песка и соды.
+                    Умножив размеры отходов от одного человека на общее
+                    население планеты, становится понятным, почему полимеры так
+                    опасны для жизни на Земле в целом. 
                   </List>
-                </Container>
-                <ButtonWrapper buttonWidth="300px">
+                  <List>
+                  <ListItem red>
+                      <UpMark />
+                      <p>Полиэтиленовые пакеты сохраняются до 20 лет</p>
+                    </ListItem>
+                    <ListItem red>
+                      <UpMark />
+                      <p>Пластмассовые изделия могут сохраняться столетиями</p>
+                    </ListItem>
+                  </List>
+                  <ButtonWrapper buttonWidth="300px">
                   <Button font="20px" onClick={handleSetNextStep}>
                     Что принимаем?
                   </Button>
                 </ButtonWrapper>
+                </Container>
               </Row>
             </Wrapper>
           )}
@@ -73,7 +91,7 @@ export const PlasticAcceptance = ({ animation }) => {
           {(state) => (
             <Wrapper>
               <Row state={state} mobileRow>
-                <Container>
+                <Container >
                   <Heading>Принимаем</Heading>
                   <List>
                     <ListItem green>
@@ -125,22 +143,22 @@ export const PlasticAcceptance = ({ animation }) => {
                       <UpMark />
                       <p>Виды пластика под номерами 4, 5, 6, 7, 8</p>
                     </ListItem>
-                  <ButtonWrapper buttonWidth="500px">
-                    <Button
-                      font="20px"
-                      // onClick={handleSetNextStep}
-                      buttonWidth="250px"
-                    >
-                      Куда сдавать?
-                    </Button>
-                    <Button
-                      font="20px"
-                      onClick={handleOpen}
-                      buttonWidth="250px"
-                    >
-                      Правила
-                    </Button>
-                  </ButtonWrapper>
+                    <ButtonWrapper buttonWidth="500px">
+                      <Button
+                        font="20px"
+                        // onClick={handleSetNextStep}
+                        buttonWidth="250px"
+                      >
+                        Куда сдавать?
+                      </Button>
+                      <Button
+                        font="20px"
+                        onClick={handleOpen}
+                        buttonWidth="250px"
+                      >
+                        Правила
+                      </Button>
+                    </ButtonWrapper>
                   </List>
                 </Container>
               </Row>
@@ -148,7 +166,7 @@ export const PlasticAcceptance = ({ animation }) => {
           )}
         </Transition>
       )}
-      <Modal isModalOpen={isModalOpen} handleHide={handleCancel}/>
+      <Modal isModalOpen={isModalOpen} handleHide={handleCancel} />
     </DisplayWrapper>
   );
 };
