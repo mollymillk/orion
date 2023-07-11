@@ -22,9 +22,19 @@ import { PlasticAcceptance } from "./components/displays/plastic-acceptance/Plas
 import { WastePaper } from "./components/displays/waste-paper/WastePaper";
 import { PageWrapper } from "./global/styles/global.styled";
 import useWindowDimensions from "./hooks/useWindowDimensions";
+import { Shop } from "./components/displays/shop/Shop";
 
 export const App = () => {
-  const elems = ['main', 'taxi', 'glass', 'plastic', 'metal', 'paper', 'places']
+  const elems = [
+    "main",
+    "shop",
+    "taxi",
+    "glass",
+    "plastic",
+    "metal",
+    "paper",
+    "places",
+  ];
   const [scrollPosition, setScrollPosition] = useState(0);
   const { height } = useWindowDimensions();
   const [hoveredLink, setHoveredLink] = useState("default");
@@ -42,22 +52,27 @@ export const App = () => {
     };
   }, []);
 
-  const currentElem = Math.round(scrollPosition / height)
+  const currentElem = Math.round(scrollPosition / height);
 
   return (
     <PageWrapper>
-      <Header currentElem={currentElem} elems={elems}/>
+      <Header currentElem={currentElem} elems={elems} />
       <Element name="main">
-        <MainDisplay animation={currentElem === elems.indexOf('main')}/>
+        <MainDisplay animation={currentElem === elems.indexOf("main")} />
+      </Element>
+      <Element name="shop">
+        <Shop animation={currentElem === elems.indexOf("shop")} />
       </Element>
       <Element name="taxi">
-        <EcoTaxi animation={currentElem === elems.indexOf('taxi')}/>
+        <EcoTaxi animation={currentElem === elems.indexOf("taxi")} />
       </Element>
       <Element name="glass">
         <GlassReception />
       </Element>
       <Element name="plastic">
-        <PlasticAcceptance animation={currentElem === elems.indexOf('plastic')}/>
+        <PlasticAcceptance
+          animation={currentElem === elems.indexOf("plastic")}
+        />
       </Element>
       <Element name="metal">
         <MetalReception />
@@ -68,7 +83,10 @@ export const App = () => {
       <Element name="places">
         <PlacesToRent />
       </Element>
-      <IconButtons animation={!(currentElem === elems.indexOf('main'))} setHoveredLink={setHoveredLink}/>
+      <IconButtons
+        animation={!(currentElem === elems.indexOf("main"))}
+        setHoveredLink={setHoveredLink}
+      />
     </PageWrapper>
   );
 };

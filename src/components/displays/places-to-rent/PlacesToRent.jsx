@@ -9,12 +9,15 @@ export const PlacesToRent = () => {
       <MapWrapper>
         <Heading>Куда сдавать вторсырье?</Heading>
         <YMaps>
-          <Placemark geometry={[55.75, 37.61]}/>
           <div>
             <Map
-              defaultState={{ center: [55.75, 37.57], zoom: 9 }}
+              defaultState={{ center: [48.760975, 44.648057], zoom: 10 }}
               className="map"
-            />
+            >
+              <Placemark geometry={[48.727028, 44.490619]}/>
+          <Placemark geometry={[48.789878, 44.747375]}/>
+          <Placemark geometry={[48.793511, 44.572536]}/>
+            </Map>
           </div>
         </YMaps>
       </MapWrapper>
@@ -34,7 +37,7 @@ export const PlacesToRent = () => {
         <PlacesItem>
           <Heading>
           Пункт приема металла, стекла, макулатуры и ПЭТ
-          <p>ул. генерала Ватутина, 28</p>
+          <p>ул. Генерала Ватутина, 28</p>
           </Heading>
         </PlacesItem>
 

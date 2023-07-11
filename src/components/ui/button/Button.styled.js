@@ -42,8 +42,8 @@ export const IconButton = styled.button`
     width: 40px;
     height: 40px;
     svg {
-      width: 40px;
-    height: 40px;
-  }
+      width: ${({ phone }) => (phone ? "30px" : "40px")};
+      height: ${({ phone }) => (phone ? "30px" : "40px")};
+    }
   }
 `;

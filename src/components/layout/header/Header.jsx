@@ -9,7 +9,7 @@ export const Header = ({elems, currentElem}) => {
     <HeaderWrapper>
       <LinksList>
         <ListItem active={currentElem === elems.indexOf('taxi')}>
-          <Link to="taxi" spy={true} smooth={true} duration={500}>Эко-такси</Link>
+          <Link to="taxi" spy={true} smooth={true} duration={500}>О нас</Link>
         </ListItem>
         <ListItem active={currentElem === elems.indexOf('glass')}>
           <Link to="glass" spy={true} smooth={true} duration={500}>Прием стекла</Link>

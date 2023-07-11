@@ -5,7 +5,6 @@ import {
   List,
   Wrapper,
   Row,
-  SvgWrapper,
   ButtonWrapper,
   ListItem,
   TextWrapper,
@@ -13,17 +12,13 @@ import {
 } from "./PlasticAcceptance.styled";
 import { Heading } from "./../../ui/text/text.styled";
 import {
-  BackArrow,
-  BottleFour,
-  BottleOne,
-  BottleThree,
-  BottleTwo,
   UpMark,
 } from "../../ui/icons/Icons";
 import { Button } from "../../ui/button/Button.styled";
 import { Transition } from "react-transition-group";
 import { Modal } from "../../ui/modal/Modal";
 import plastic from "../../../assets/img/plastic.jpg";
+import { Link } from "react-scroll";
 
 export const PlasticAcceptance = ({ animation }) => {
   const [step, setStep] = useState(1);
@@ -146,10 +141,12 @@ export const PlasticAcceptance = ({ animation }) => {
                     <ButtonWrapper buttonWidth="500px">
                       <Button
                         font="20px"
-                        // onClick={handleSetNextStep}
                         buttonWidth="250px"
                       >
+                        <Link to="places" spy={true} smooth={true} duration={500}>
+
                         Куда сдавать?
+                        </Link>
                       </Button>
                       <Button
                         font="20px"

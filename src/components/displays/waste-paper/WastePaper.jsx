@@ -15,6 +15,7 @@ import { useState } from "react";
 import paper from "../../../assets/img/paper.jpg";
 import { UpMark } from "../../ui/icons/Icons";
 import { Modal } from "../../ui/modal/Modal";
+import { Link } from "react-scroll";
 
 export const WastePaper = () => {
   const [step, setStep] = useState(1);
@@ -95,7 +96,9 @@ export const WastePaper = () => {
             </List>
             <ButtonsWrapper>
               <Button buttonWidth="250px" font="20px">
+              <Link to="places" spy={true} smooth={true} duration={500}>
                 Куда сдавать?
+                </Link>
               </Button>
               <Button buttonWidth="250px" font="20px" onClick={showModal}>
                 Правила

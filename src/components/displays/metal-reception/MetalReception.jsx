@@ -14,6 +14,7 @@ import { useState } from "react";
 import metal from "../../../assets/img/metal.png";
 import { UpMark } from "../../ui/icons/Icons";
 import { Modal } from "../../ui/modal/Modal";
+import { Link } from "react-scroll";
 
 export const MetalReception = () => {
   const [step, setStep] = useState(1);
@@ -112,7 +113,9 @@ export const MetalReception = () => {
               </ListItem>
             </List>
             <Button buttonWidth="300px" font="20px">
+            <Link to="places" spy={true} smooth={true} duration={500}>
               Куда сдавать?
+              </Link>
             </Button>
             <Button buttonWidth="300px" font="20px" onClick={showModal}>
               Правила

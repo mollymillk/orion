@@ -7,16 +7,11 @@ import {
   TextWrapper,
   MainPhoto,
   DisplayWrapper,
-  MainText,
-  IconButtonsWrapper,
   LinkInfo,
   ArrowButton,
 } from "./MainDisplay.styled";
 import {
-  TelegramIcon,
-  UpArrowIcon,
-  VKIcon,
-  WhatAppIcon,
+  UpArrowIcon 
 } from "../../ui/icons/Icons";
 import { IconButtons } from "../../layout/icon-buttons/IconButtons";
 import { Link } from "react-scroll";
@@ -56,7 +51,11 @@ export const MainDisplay = ({ animation }) => {
               региона. Помогаем людям и компаниям стать более осознанными и
               экологичными, внедряя раздельный сбор и экопривычки.
             </Text>
-            <Button buttonWidth={"200px"} font="20px">
+            <Button
+              buttonWidth={"200px"}
+              font="20px"
+              onClick={() => window.open("tel:+79608857272")}
+            >
               Позвонить нам
             </Button>
             <IconButtons animation={false} setHoveredLink={setHoveredLink} />

@@ -14,6 +14,7 @@ import { useState } from "react";
 import glass from "../../../assets/img/glass.jpg";
 import { UpMark } from "../../ui/icons/Icons";
 import { Modal } from "../../ui/modal/Modal";
+import { Link } from "react-scroll";
 
 export const GlassReception = () => {
   const [step, setStep] = useState(1);
@@ -87,7 +88,9 @@ export const GlassReception = () => {
               </ListItem>
             </List>
             <Button buttonWidth="300px" font="20px">
+            <Link to="places" spy={true} smooth={true} duration={500}>
               Куда сдавать?
+              </Link>
             </Button>
             <Button buttonWidth="300px" font="20px" onClick={showModal}>
               Правила

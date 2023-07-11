@@ -14,7 +14,8 @@ export const IconButtons = ({ animation, setHoveredLink }) => {
         font="20px"
         size='30px'
         phone
-        scrolled={animation}>
+        scrolled={animation}
+        onClick={() => window.open("tel:+79608857272")}>
         <PhoneIcon/>
       </IconButton>
       <IconButton
@@ -22,14 +23,16 @@ export const IconButtons = ({ animation, setHoveredLink }) => {
         hoverColor="#1298db"
         font="20px"
         onMouseEnter={() => setHoveredLink("telegram")}
+        onClick={() => window.open("https://t.me/ecotaxivlg")}
       >
-        <TelegramIcon />
+        <TelegramIcon/>
       </IconButton>
       <IconButton
         buttonColor="#25D366"
         hoverColor="#3be37a"
         font="20px"
         onMouseEnter={() => setHoveredLink("whatsapp")}
+        onClick={() => window.open("//api.whatsapp.com/send?phone=89608857272")}
       >
         <WhatAppIcon />
       </IconButton>
@@ -38,6 +41,7 @@ export const IconButtons = ({ animation, setHoveredLink }) => {
         hoverColor="#588cc7"
         font="20px"
         onMouseEnter={() => setHoveredLink("vk")}
+        onClick={() => window.open("https://vk.com/chistoebud")}
       >
         <VKIcon />
       </IconButton>

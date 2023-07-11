@@ -17,7 +17,7 @@ export const MobileMenu = () => {
       <List visible={isOpen}>
         <Item>
         <Link to="taxi" spy={true} smooth={true} duration={500}>
-            <Text>Эко-такси</Text>
+            <Text>О нас</Text>
             </Link>
         </Item>
         <Item>
